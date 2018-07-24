@@ -1,0 +1,6 @@
+sw-runes/swrunes/swrunes/__pycache__/*
+
+
+*.pyc
+.vscode
+sw-runes/swrunes/settings.py
