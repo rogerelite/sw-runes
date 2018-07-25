@@ -114,6 +114,7 @@ MIDDLEWARE = (
 )
 
 INSTALLED_APPS = (
+    'swrunesadmin.apps.SwrunesadminConfig',
     'djangocms_admin_style',
     'django.contrib.auth',
     'django.contrib.contenttypes',
