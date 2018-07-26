@@ -51,6 +51,11 @@ h2 {
     width: 100px;
 }
 
+.position {
+    font-size: 20px;
+    font-weight: 900;
+}
+
 .type-rune p, .atr-runa p {
     text-transform: uppercase;
     font-weight: 600;
