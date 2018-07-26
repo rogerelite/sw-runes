@@ -1,0 +1,129 @@
+p {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    padding-left: 0;
+}
+.nav li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+.container {
+    width: 940px;
+    margin: 0 auto
+}
+.content {
+    float: left;
+    width: 80%;
+}
+.sidebar {
+    float: left;
+    width: 20%;
+}
+
+.catalogo {
+    text-align: center;
+    width: max-content;
+    display: inline-block;
+    margin: 0 10px 20px 0;
+}
+
+.img-mob img {
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.rune {
+    display: inline-block;
+    width: 100px;
+}
+
+.type-rune p, .atr-runa p {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.img-rune img {
+    width: 40px;
+}
+
+/**Modal**/
+@media (max-width: 1024px) {
+    .window {
+        max-width: 41%!important;
+    }
+}
+@media (max-width: 1366px) {
+    .window {
+        max-width: 70%!important;
+        top: 19%;
+    }
+    .window .overflow-text {
+        overflow: auto;
+        height: 45vh;
+    }
+}
+.window {
+    max-width: 40%!important;
+    width: 100%;
+    display: none;
+    height: 70vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f7f2ee;
+    z-index: 9900;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+#mascara {
+    display:none;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+}
+
+.fechar {
+    display:block;
+    text-align:right;
+    font-size: 25px;
+}
+.window .fechar {
+    float: right;
+}
+.window .fechar:before {
+    content: '\2716';
+}
+.window .card-image {
+    text-align: center;
+}
+.window h4 {
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+
+.catalogo-modal a {
+    position: absolute;
+    right: 35px;
+}
+/**Fim Modal**/

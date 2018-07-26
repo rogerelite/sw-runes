@@ -35,11 +35,23 @@ class RunaPlugin(CMSPluginBase):
     name = "Runa"
     render_template = "swrunesadmin/runa.html"
     allow_children = True
-    child_classes = ['PicturePlugin', 'AtributoRunaPlugin']
+    child_classes = ['PicturePlugin', 'GroupAtributeRunePlugin']
 
     def render(self, context, instance, placeholder):
         context.update( {'instance':instance})
         return context 
+
+@plugin_pool.register_plugin
+class GroupAtributeRunePlugin(CMSPluginBase):
+    module = "Agrupadores"
+    name = "Agrupador de atributos de runas"
+    render_template = "swrunesadmin/grupo_atributos_runa.html"
+    allow_children = True
+    child_classes = ['AtributoRunaPlugin']
+
+    def render(self, context, instance, placeholder):
+        context.update( {'instance':instance})
+        return context
 
 @plugin_pool.register_plugin
 class AtributoRunaPlugin(CMSPluginBase):
@@ -47,7 +59,7 @@ class AtributoRunaPlugin(CMSPluginBase):
     module = "Genérico"
     name = "Atributo da runa"
     render_template = "swrunesadmin/atributo_runa.html"
-    allow_children = True
+    allow_children = False
 
     def render(self, context, instance, placeholder):
         context.update( {'instance':instance})

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os  # isort:skip
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -167,9 +168,8 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('base.html', 'Páginas básicas'),
+    ('internas.html', 'Páginas internas'),
 )
 
 CMS_PERMISSION = True

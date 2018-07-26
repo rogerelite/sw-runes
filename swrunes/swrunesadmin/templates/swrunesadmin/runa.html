@@ -1,0 +1,18 @@
+{% load cms_tags %}
+<div class="rune">
+    <div class="type-rune">
+        <p>{{instance.typerune}}</p>
+    </div>
+    <div class="img-rune">
+        {% for plugin in instance.child_plugin_instances %}
+            {% if plugin.picture != None %}
+                {% render_plugin plugin %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% for plugin in instance.child_plugin_instances %}
+        {% if plugin.picture == None %}
+            {% render_plugin plugin %}
+        {% endif %}
+    {% endfor %}
+</div>

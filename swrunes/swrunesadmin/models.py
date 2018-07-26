@@ -19,8 +19,8 @@ class CatalogoMonstro(CMSPlugin):
         return self.title
 
 class Runa(CMSPlugin):
-    typerune = models.CharField(max_length = 5, verbose_name = _('Tipo'), choices = TYPE_RUNAS_CHOICES, null = True, blank = True)
-    pos = models.CharField(max_length = 20, verbose_name = _('Posição'), choices = POSITION_RUNAS_CHOICES, null = True, blank = True)
+    typerune = models.CharField(max_length = 20, verbose_name = _('Tipo'), choices = TYPE_RUNAS_CHOICES, null = True, blank = True)
+    pos = models.CharField(max_length = 1, verbose_name = _('Posição'), choices = POSITION_RUNAS_CHOICES, null = True, blank = True)
     
     def __unicode__(self):
         return self.typerune
@@ -31,6 +31,7 @@ class Runa(CMSPlugin):
 class AtributoRuna(CMSPlugin):
     atribute = models.CharField(max_length = 5, verbose_name = _('Atributo'), choices = ATRIBUTOS_RUNAS_CHOICES, null = True, blank = True)
     active = models.BooleanField(default=True, verbose_name = _('Com %'))
+    order = models.CharField(max_length = 20, verbose_name = _('Ordem do atributo'), choices = ORDER_ATRIBUTO_CHOICES, null = True, blank = True)
     
     def __unicode__(self):
         return self.atribute

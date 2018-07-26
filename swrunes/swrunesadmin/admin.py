@@ -7,5 +7,5 @@ from .models import Runa, AtributoRuna
 
 # Registrar aqui caso queira que seja visivel no menu de admin, como no exemplo abaixo.
 
-admin.site.register(Runa)
-admin.site.register(AtributoRuna)
+# admin.site.register(Runa)
+# admin.site.register(AtributoRuna)

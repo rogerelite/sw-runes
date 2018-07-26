@@ -1,0 +1,40 @@
+{% load cms_tags %}
+<a href="#{{instance.id}}" rel="modal">
+    <div class="catalogo">
+        <h2>
+            {{instance.title}}
+        </h2>
+        <div class="img-mob">
+            {% for plugin in instance.child_plugin_instances %}
+                {% if plugin.picture != None %}
+                    {% render_plugin plugin %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</a>
+<div class="catalogo-modal window" id="{{instance.id}}">
+    <a href="#" class="fechar">&nbsp;</a>
+    <div class="img-mob">
+        <h2>
+            {{instance.title}}
+        </h2>
+        {% for plugin in instance.child_plugin_instances %}
+            {% if plugin.picture != None %}
+                {% render_plugin plugin %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="desc-mob">
+        {{instance.description}}
+    </div>
+    <div class="grp-runes">
+        {% for plugin in instance.child_plugin_instances %}
+            {% if plugin.picture == None %}
+                {% render_plugin plugin %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!-- mascara para cobrir o site -->  
+<div id="mascara"></div>
