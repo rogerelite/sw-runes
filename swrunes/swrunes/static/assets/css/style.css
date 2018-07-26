@@ -31,7 +31,7 @@ a {
 
 .catalogo {
     text-align: center;
-    width: max-content;
+    width: 130px;
     display: inline-block;
     margin: 0 10px 20px 0;
 }
